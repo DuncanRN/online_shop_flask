@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Orders List</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+
+
+        <h1>Our shop's Orders  List!</h1>
+        <div>
+            <p>
+                Name: {{ order.customer_name }}<br>
+                Date: {{ order.order_date }}<br>
+                Quantity: {{ order.quantity }}<br>
+                Title: {{ order.item_title }}<br>
+                Description:    {{ order.description }} <br><br>
+                <a href="http://localhost:4999/orders">back to orders page</a>
+
+            </p>
+            <hr>
+        </div>
+        
+    </body>
+</html>

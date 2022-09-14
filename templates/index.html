@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Orders List</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h1>Our shop's Orders List!</h1>
+        
+        {% set count = [] %}
+            
+        {% for order in orders %}
+            <div>
+                
+                <p>
+                    {{ order.customer_name }} : {{ order.item_title }} 
+                    &nbsp; &nbsp; 
+                    <a href="http://localhost:4999/orders/{{ count|length }}">more info...</a>
+                </p>
+                
+                {% set __ = count.append(1) %}  
+            </div>
+        {% endfor %}
+        
+    </body>
+</html>
